@@ -1,0 +1,13 @@
+Debug
+/bin/decode_x264.exe
+/bin/decode_x264.ilk
+/bin/decode_x264.pdb
+/bin/ds.h264
+/bin/encode_x264.exe
+/bin/encode_x264.ilk
+/bin/encode_x264.pdb
+/bin/list_devices.exe
+/bin/list_devices.ilk
+/bin/list_devices.pdb
+.vs
+/fftest.sdf
