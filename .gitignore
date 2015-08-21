@@ -11,3 +11,9 @@ Debug
 /bin/list_devices.pdb
 .vs
 /fftest.sdf
+/decode_aac/WavinFlag.pcm
+/bin/decode_aac.exe
+/bin/decode_aac.ilk
+/bin/decode_aac.pdb
+/decode_x264/bigbuckbunny_480x272.yuv
+/fftest.opensdf
