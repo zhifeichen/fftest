@@ -17,3 +17,8 @@ Debug
 /bin/decode_aac.pdb
 /decode_x264/bigbuckbunny_480x272.yuv
 /fftest.opensdf
+/fftest/bigbuckbunny.mp4
+/fftest/bigbuckbunny.ts
+/bin/fftest.exe
+/bin/fftest.ilk
+/bin/fftest.pdb

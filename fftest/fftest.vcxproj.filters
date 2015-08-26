@@ -18,6 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="muxer_mp4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="muxer_ts.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">

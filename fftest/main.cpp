@@ -4,14 +4,14 @@
 
 #include "common.h"
 
-DECLFUN(test_interface_addresses)
-DECLFUN(test_GetAdaptersAddresses)
+DECLFUN(muxer_mp4)
+DECLFUN(muxer_ts)
 DECLFUN(test_cond)
 
 TEST_LIST_START
-REGFUN(test_interface_addresses, 0)
-REGFUN(test_GetAdaptersAddresses, 0)
-REGFUN(test_cond, 1)
+REGFUN(muxer_mp4, 0)
+REGFUN(muxer_ts, 1)
+//REGFUN(test_cond, 1)
 TEST_LIST_END
 
 void print_task(void)
