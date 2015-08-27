@@ -24,6 +24,9 @@
     <ClCompile Include="muxer_ts.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="demuxer_ts.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">

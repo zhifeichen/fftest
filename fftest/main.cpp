@@ -6,12 +6,12 @@
 
 DECLFUN(muxer_mp4)
 DECLFUN(muxer_ts)
-DECLFUN(test_cond)
+DECLFUN(demuxer_ts)
 
 TEST_LIST_START
-REGFUN(muxer_mp4, 0)
-REGFUN(muxer_ts, 1)
-//REGFUN(test_cond, 1)
+	REGFUN(muxer_mp4, 0)
+	REGFUN(muxer_ts, 0)
+	REGFUN(demuxer_ts, 1)
 TEST_LIST_END
 
 void print_task(void)

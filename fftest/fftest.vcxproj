@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="demuxer_ts.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="muxer_mp4.cpp" />
     <ClCompile Include="muxer_ts.cpp" />
