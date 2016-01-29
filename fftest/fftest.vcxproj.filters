@@ -30,9 +30,24 @@
     <ClCompile Include="std_function_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="get_rest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NetCommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rest_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="get_rest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetCommon.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -124,7 +124,7 @@ int sky_rest::send_request(int s, const std::string path, const std::string toke
 				<< "\r\n";
 	std::string s_req = request.str();
 	int ret = send(s, s_req.c_str(), s_req.length(), 0);
-	shutdown(s, REST_SEND);
+	//shutdown(s, REST_SEND);
 	return ret;
 }
 
@@ -149,7 +149,7 @@ int sky_rest::send_post_request(int s, const std::string path, const std::string
 				<< "\r\n"
 				<< data;
 	int ret = send(s, request.str().c_str(), request.str().length(), 0);
-	shutdown(s, REST_SEND);
+	//shutdown(s, REST_SEND);
 	return ret;
 }
 
@@ -163,9 +163,35 @@ int sky_rest::get_response(int s, std::string& result)
 		ss << buff;
 		received += ret;
 		//memset(buff, 0, 10*1024);
+		if (!check_receiv_complete(buff)) {
+			break;
+		}
 	}
 	if(received > 0) result = buff;//ss.str();
 	return received;
+}
+
+int sky_rest::check_receiv_complete(const char* buf)
+{
+	int ret = -1;
+	int contentLen = -1;
+	std::istringstream input;
+	input.str(buf);
+	for (std::string line; std::getline(input, line); ) {
+		std::string::size_type n = line.find("Content-Length");
+		if (n == std::string::npos) {
+			continue;
+		} else {
+			std::string sLen = line.substr(15);
+			contentLen = std::stoi(sLen);
+			std::string body;
+			get_response_body(buf, body);
+			if (body.length() == contentLen) {
+				return 0;
+			}
+		}
+	}
+	return -1;
 }
 
 int sky_rest::get_response_body(const std::string response, std::string& body)

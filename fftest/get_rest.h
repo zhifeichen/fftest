@@ -12,6 +12,7 @@ private:
 	static int send_post_request(int s, const std::string path, const std::string data, const std::string token, const std::string host, const short port);
 	static int get_response(int s, std::string& result);
 	static int get_response_body(const std::string response, std::string& body);
+	static int check_receiv_complete(const char* buf);
 public:
 // get_rest: use GET method; post_rest: use POST method
 // url: in
