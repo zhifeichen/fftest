@@ -10,16 +10,19 @@ public:
 	}
 };
 
-// 定义function类型, 三个参数
+// 瀹氫箟function绫诲瀷, 涓変釜鍙傛暟
 std::function<void(View*, int, int)> clickCallback;
 
 //
 int std_function_test(void* noUse)
 {
 	View button;
-	// 指向成员函数
+	// 鎸囧悜鎴愬憳鍑芥暟
 	clickCallback = &View::onClick;
-	// 进行调用
+	// 杩涜璋冪敤
 	clickCallback(&button, 10, 123);
+
+	auto f1 = [](int x, int y) { return x + y; };
+	std::cout << typeid(f1).name() << std::endl;
 	return 0;
 }
